@@ -74,45 +74,45 @@ const CarouselReviews = () => {
 	const reviews = [
 		{
 			id: 1,
-			image: 'https://placehold.co/900',
+			image: 'https://placehold.co/900', // TODO: фото пациента
 			name: 'Зухра Сурхоева',
-			department: 'Кардиология',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
+			department: 'Терапия',
+			text: 'Очень довольна клиникой. Всё чётко и без лишнего ожидания. Врач внимательно выслушала, назначила нужные анализы — результаты получила в тот же день.'
 		},
 		{
 			id: 2,
-			image: 'https://placehold.co/900',
+			image: 'https://placehold.co/900', // TODO: фото пациента
 			name: 'Зарета Оздоева',
-			department: 'Хирургия',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
+			department: 'Гинекология',
+			text: 'Хожу в «Здоровье+» уже несколько лет. Нравится, что здесь можно и проконсультироваться, и сдать анализы, и сделать УЗИ — не надо ехать в разные места.'
 		},
 		{
 			id: 3,
-			image: 'https://placehold.co/900',
+			image: 'https://placehold.co/900', // TODO: фото пациента
 			name: 'Лейла Куштова',
-			department: 'Неврология',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
+			department: 'УЗИ-диагностика',
+			text: 'Делала УЗИ в этой клинике. Оборудование современное, специалист всё подробно объяснила. Осталась очень довольна — рекомендую всем знакомым.'
 		},
 		{
 			id: 4,
-			image: 'https://placehold.co/900',
+			image: 'https://placehold.co/900', // TODO: фото пациента
 			name: 'Рая Костоева',
 			department: 'Терапия',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
+			text: 'Клиника работает уже 26 лет — и это чувствуется в уровне врачей и сервиса. Приятная атмосфера, вежливый персонал, никаких очередей.'
 		},
 		{
 			id: 5,
-			image: 'https://placehold.co/900',
+			image: 'https://placehold.co/900', // TODO: фото пациента
 			name: 'Марет Галаева',
-			department: 'Терапия',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
+			department: 'Лабораторная диагностика',
+			text: 'Сдавала анализы несколько раз. Результаты всегда приходят быстро. Лаборатория работает чётко, персонал профессиональный и аккуратный.'
 		},
 		{
 			id: 6,
-			image: 'https://placehold.co/900',
+			image: 'https://placehold.co/900', // TODO: фото пациента
 			name: 'Алина Галаева',
-			department: 'Педиатрия',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores autem cum deleniti dolorem ea eos hic ipsum magnam magni minima, natus neque nostrum obcaecati optio pariatur sapiente similique ullam.\n'
+			department: 'Урология',
+			text: 'Муж ходил к урологу — говорит, что впервые нашёл врача, который действительно выслушал и объяснил всё понятно. Будем обращаться ещё.'
 		},
 	]
 	return (

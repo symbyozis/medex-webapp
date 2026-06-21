@@ -28,27 +28,27 @@ export const CarouselDoctors: React.FC = () => {
     const slides: IDoctor[] = [
         {
             id: 1,
-            image: 'https://placehold.co/900',
-            name: 'Муэз Хадиджа',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
-            link: 'test',
-            position: 'ЛОР-врач',
+            image: 'https://placehold.co/900', // TODO: фото врача
+            name: 'Муйез Хадиджа',
+            description: 'Ведёт приём по терапии и гинекологии. Многолетний опыт работы в клинике «Здоровье+» — внимательный подход к каждому пациенту.',
+            link: 'doctors',
+            position: 'Терапевт, Гинеколог',
         },
         {
             id: 2,
-            image: 'https://placehold.co/900',
-            name: 'Эбреолидзе Ираклий',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
-            position: 'Невролог',
-            link: 'test1',
+            image: 'https://placehold.co/900', // TODO: фото врача
+            name: 'Ужахов Мухаммад',
+            description: 'Специалист по диагностике и лечению урологических заболеваний. Консультирует как первичных, так и повторных пациентов.',
+            position: 'Уролог',
+            link: 'doctors',
         },
         {
             id: 3,
-            image: 'https://placehold.co/900',
+            image: 'https://placehold.co/900', // TODO: фото врача
             name: 'Хачукаева Заира',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
-            position: 'Кардиолог',
-            link: 'test2',
+            description: 'Руководит лабораторией клиники. Проводит и интерпретирует лабораторные исследования.', // TODO: уточнить должность
+            position: 'Лаборатория', // TODO: уточнить должность
+            link: 'doctors',
         }
     ]
     return (

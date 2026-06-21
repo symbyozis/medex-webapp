@@ -4,7 +4,7 @@ import {Badge, Box, Button, List, ListItem, ListItemText, Paper, Typography} fro
 export interface ICheckup {
     image: string
     name: string
-    price: number
+    price: number | null
     points: string[]
     link: string
 }
@@ -51,10 +51,11 @@ export const Checkup: React.FC<ICheckup> = (props) => {
                         variant="h2"
                         sx={{
                             py: 3,
-                            fontFamily: 'var(--main-font)'
+                            fontFamily: 'var(--main-font)',
+                            fontSize: props.price === null ? '1.25rem' : undefined,
                         }}
                     >
-                        ${props.price}
+                        {props.price === null ? 'Уточняйте по телефону' : `${props.price} ₽`}
                     </Typography>
                     <List dense sx={{ mb: 3 }}>
                         {props.points.map(point => (

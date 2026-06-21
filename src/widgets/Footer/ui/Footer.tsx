@@ -57,7 +57,7 @@ const [patients, support] = [
       { title: "Услуги", link: "services" },
       { title: "Врачи", link: "doctors" },
       { title: "Вызов врача на дом", link: "call-doctor" },
-      { title: "Новости", link: "news" },
+      { title: "Новости", link: "/#news" },
     ],
   },
   {

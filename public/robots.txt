@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# TODO: обновить домен когда будет подключён продакшн-домен
+Sitemap: https://medex-22115.web.app/sitemap.xml

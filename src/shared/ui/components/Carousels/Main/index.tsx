@@ -43,28 +43,30 @@ export const CarouselMain: React.FC = () => {
 
     const slides: TSlide[] = [
         {
-            image: 'https://placehold.co/900',
-            title: 'Uncompromising excellence. Commitment to care.',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
-            link: 'test',
+            image: 'https://placehold.co/900', // TODO: фото клиники / главный баннер
+            title: '26 лет на страже вашего здоровья',
+            text: 'Многопрофильная клиника «Здоровье+» в Назрани — терапия, гинекология, урология и диагностика под одной крышей.',
+            link: 'contacts',
         },
         {
-            image: 'https://placehold.co/900',
-            title: 'Your Community Hospital Providing Generations of Caring',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
-            link: 'test1',
+            image: 'https://placehold.co/900', // TODO: фото врачей
+            title: 'Внимательные врачи. Точная диагностика.',
+            text: 'Лабораторные анализы и УЗИ-исследования прямо в клинике — без лишних поездок и очередей.',
+            link: 'services',
         },
         {
-            image: 'https://placehold.co/900',
-            title: 'World class care right where you need it ',
-            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, vero?',
-            link: 'test2',
+            image: 'https://placehold.co/900', // TODO: фото кабинета / приёма
+            title: 'Принимаем ежедневно, кроме воскресенья',
+            text: 'Пн–Пт с 9:00 до 15:00, в субботу с 9:00 до 13:00. Запишитесь по телефону или через форму на сайте.',
+            link: 'contacts',
         }
     ]
     return (
         <Box sx={{
             position: 'relative',
-            pb: { xs: '60px', md: 0 }
+            pb: { xs: '60px', md: 0 },
+            '& .slick-prev': { left: '-35px' },
+            '& .slick-next': { right: '-35px' },
         }}>
             <Slider {...settings}>
                 {slides.map(slide => (
@@ -75,14 +77,14 @@ export const CarouselMain: React.FC = () => {
                                     {slide.title}
                                 </Typography>
                                 <Typography sx={{ my: { xs: 2, md: 3 } }}>{slide.text}</Typography>
-                                <Button variant="contained" href={slide.link}>Make Appointment</Button>
+                                <Button variant="contained" href={slide.link}>Записаться на приём</Button>
                             </Grid>
                             <Grid size={{ xs: 12, md: 8 }} sx={{ order: { xs: 1, md: 2 }, mb: { xs: 2, md: 0 }, pb: { xs: '50px', md: 0 } }}>
                                 <figure
                                     className="w-full bg-no-repeat bg-cover bg-center rounded-[20px]"
                                     style={{
                                         backgroundImage: `url(${slide.image})`,
-                                        height: 'clamp(300px, 76vh, 76vh)',
+                                        height: 'clamp(500px, 76vh, 76vh)',
                                         minHeight: '300px'
                                     }}
                                 />

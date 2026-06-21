@@ -24,7 +24,7 @@ const [patients, support] = [
 			{ title: 'Услуги', link: 'services' },
 			{ title: 'Врачи', link: 'doctors' },
 			{ title: 'Вызов врача на дом', link: 'call-doctor' },
-			{ title: 'Новости', link: 'news' },
+			{ title: 'Новости', link: '/#news' },
 		]
 	},
 	{
@@ -106,31 +106,31 @@ export const Footer: React.FC = (props) => {
 								</Box>
 							</Grid>
 							<Grid size={{ md: 2 }}>
-								<h4 className="text-[1.1rem] font-semibold leading-[31px] mb-5 relative text-[#707070] after:content-[''] after:clear-both after:table after:h-[2px] after:w-[40px] after:bg-[var(--primary-color)] after:mt-[10px] after:mb-[25px] after:block">
+								<h4 className="text-[1.1rem] font-semibold leading-[31px] mb-5 relative text-[#707070] after:content-[''] after:clear-both after:table after:h-[2px] after:w-[40px] after:bg-[var(--primary-color)] after:mt-[10px] after:mb-[25px]">
 									{patients.capture}
 								</h4>
 								<ul>
 									{patients.items.map(({ title, link }) => (
 										<li key={link} className="block break-words text-[#DEE5EA] text-sm leading-[30px]">
-											<Link href={link} className="text-[#A7A7A7] font-[var(--heading-font)] font-medium capitalize relative hover:text-[var(--primary-color)] after:content-[''] after:absolute after:left-[2px] after:bottom-[-8px] after:font-black after:clear-both after:table after:h-[2px] after:w-0 after:bg-[var(--primary-color)] after:transition-all after:duration-300 after:ease-in hover:after:w-[15px]">{title}</Link>
+											<Link href={link} className="text-[#A7A7A7] font-[var(--heading-font)] capitalize relative hover:text-[var(--primary-color)] after:content-[''] after:absolute after:left-[2px] after:bottom-[-8px] after:font-black after:clear-both after:table after:h-[2px] after:w-0 after:bg-[var(--primary-color)] after:transition-all after:duration-300 after:ease-in hover:after:w-[15px]">{title}</Link>
 										</li>
 									))}
 								</ul>
 							</Grid>
 							<Grid size={{ md: 2 }}>
-								<h4 className="text-[1.1rem] font-semibold leading-[31px] mb-5 relative text-[#707070] after:content-[''] after:clear-both after:table after:h-[2px] after:w-[40px] after:bg-[var(--primary-color)] after:mt-[10px] after:mb-[25px] after:block">
+								<h4 className="text-[1.1rem] font-semibold leading-[31px] mb-5 relative text-[#707070] after:content-[''] after:clear-both after:table after:h-[2px] after:w-[40px] after:bg-[var(--primary-color)] after:mt-[10px] after:mb-[25px]">
 									{support.capture}
 								</h4>
 								<ul>
 									{support.items.map(({ title, link }) => (
 										<li key={link} className="block break-words text-[#DEE5EA] text-sm leading-[30px]">
-											<Link href={link} className="text-[#A7A7A7] font-[var(--heading-font)] font-medium capitalize relative hover:text-[var(--primary-color)] after:content-[''] after:absolute after:left-[2px] after:bottom-[-8px] after:font-black after:clear-both after:table after:h-[2px] after:w-0 after:bg-[var(--primary-color)] after:transition-all after:duration-300 after:ease-in hover:after:w-[15px]">{title}</Link>
+											<Link href={link} className="text-[#A7A7A7] font-[var(--heading-font)] capitalize relative hover:text-[var(--primary-color)] after:content-[''] after:absolute after:left-[2px] after:bottom-[-8px] after:font-black after:clear-both after:table after:h-[2px] after:w-0 after:bg-[var(--primary-color)] after:transition-all after:duration-300 after:ease-in hover:after:w-[15px]">{title}</Link>
 										</li>
 									))}
 								</ul>
 							</Grid>
 							<Grid size={{ md: 4 }}>
-								<h4 className="text-[1.1rem] font-semibold leading-[31px] mb-5 relative text-[#707070] after:content-[''] after:clear-both after:table after:h-[2px] after:w-[40px] after:bg-[var(--primary-color)] after:mt-[10px] after:mb-[25px] after:block">
+								<h4 className="text-[1.1rem] font-semibold leading-[31px] mb-5 relative text-[#707070] after:content-[''] after:clear-both after:table after:h-[2px] after:w-[40px] after:bg-[var(--primary-color)] after:mt-[10px] after:mb-[25px]">
 									Рассылка
 								</h4>
 								<Typography sx={{ fontSize: 14, fontWeight: 500, mb: 2 }}>
