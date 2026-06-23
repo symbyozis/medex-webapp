@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Клиника «Здоровье+» — Назрань, Ингушетия</title>
-        <meta name="description" content="Многопрофильная клиника «Здоровье+» в Назрани. Терапия, гинекология, урология, УЗИ и лабораторная диагностика. 26 лет опыта с 1998 года. +7 928 799-73-99." key="description" />
+        <meta name="description" content="Многопрофильная клиника «Здоровье+» в Назрани. Терапия, гинекология, урология, УЗИ и лабораторная диагностика. 26 лет опыта с 1999 года. +7 928 799-73-99." key="description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
         {/* <link rel="icon" href="/favicon.ico" /> */}

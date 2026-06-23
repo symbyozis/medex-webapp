@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 const SITE_URL = "https://medex-22115.web.app";
 
 const HOME_TITLE = "Клиника «Здоровье+» — Назрань | Терапия, Гинекология, УЗИ, Лаборатория";
-const HOME_DESCRIPTION = "Многопрофильная клиника «Здоровье+» в Назрани. Терапия, гинекология, урология, УЗИ и лабораторная диагностика. 26 лет опыта с 1998 года. Запись: +7 928 799-73-99.";
+const HOME_DESCRIPTION = "Многопрофильная клиника «Здоровье+» в Назрани. Терапия, гинекология, урология, УЗИ и лабораторная диагностика. 26 лет опыта с 1999 года. Запись: +7 928 799-73-99.";
 
 const homeJsonLd = {
   "@context": "https://schema.org",
@@ -17,7 +17,7 @@ const homeJsonLd = {
   url: SITE_URL,
   telephone: "+79287997399",
   email: "zdorplus@bk.ru",
-  foundingDate: "1998",
+  foundingDate: "1999",
   description: HOME_DESCRIPTION,
   address: {
     "@type": "PostalAddress",
@@ -201,7 +201,7 @@ const HomePage: NextPage = () => {
                 Почему пациенты выбирают нашу клинику?
               </Typography>
               <Typography sx={{ my: { xs: 2, md: 4 } }}>
-                Клиника «Здоровье+» работает с 1998 года. За 26 лет мы принимаем терапевт, гинеколог и уролог — те, кого вы знаете по имени, а не по номеру талона.
+                Клиника «Здоровье+» работает с 1999 года. За 26 лет мы принимаем терапевт, гинеколог и уролог — те, кого вы знаете по имени, а не по номеру талона.
               </Typography>
               <Button variant="contained" sx={{ mb: { xs: 3, md: 0 } }} href="/about">Подробнее о нас</Button>
             </Grid>
