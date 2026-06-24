@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import React, { useState } from "react";
+import PhoneMaskInput from '@/shared/ui/components/PhoneMaskInput';
 import {
   Box,
   Container,
@@ -15,11 +16,14 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  MenuItem,
 } from "@mui/material";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { PageLayout } from "@/shared/ui";
 import { phoneFormat } from "@/shared/lib";
 import appConfig from "@/shared/config/app.config.json";
+import { SPECIALISTS } from "@/shared/config/specialists";
+import AddressInput from "@/shared/ui/components/AddressInput";
 
 // TODO: заменить на реальный продакшн-домен, когда будет подключён (нужен для canonical/OG)
 const SITE_URL = "https://medex-22115.web.app";
@@ -186,7 +190,7 @@ const CallDoctorPage: NextPage = () => {
   const [name, setName] = useState("");
   const [phoneInput, setPhoneInput] = useState("");
   const [address, setAddress] = useState("");
-  const [symptoms, setSymptoms] = useState("");
+  const [specialist, setSpecialist] = useState("");
   const [preferredTime, setPreferredTime] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorText, setErrorText] = useState("");
@@ -205,7 +209,7 @@ const CallDoctorPage: NextPage = () => {
     const message = [
       "🏠 Вызов врача на дом",
       `Адрес: ${address}`,
-      symptoms ? `Жалобы: ${symptoms}` : null,
+      specialist ? `Направление: ${specialist}` : null,
       preferredTime ? `Удобное время: ${preferredTime}` : null,
     ]
       .filter(Boolean)
@@ -223,7 +227,7 @@ const CallDoctorPage: NextPage = () => {
         setName("");
         setPhoneInput("");
         setAddress("");
-        setSymptoms("");
+        setSpecialist("");
         setPreferredTime("");
       } else {
         const data = await res.json();
@@ -301,7 +305,7 @@ const CallDoctorPage: NextPage = () => {
               <Grid size={{ xs: 12, md: 5 }}>
                 <Box
                   component="img"
-                  src="https://placehold.co/600x450" // TODO: фото врача / выезда на дом
+                  src="/images/image.png"
                   alt="Вызов врача на дом в Назрани — клиника «Здоровье+»"
                   sx={{ width: "100%", borderRadius: "var(--border-radius)" }}
                 />
@@ -431,19 +435,24 @@ const CallDoctorPage: NextPage = () => {
                     <Box component="label" sx={{ fontSize: "14px", fontWeight: "500", lineHeight: "30px", color: "#585858" }}>
                       Телефон <Box component="span" sx={{ color: "red" }}>*</Box>
                     </Box>
-                    <TextField size="small" fullWidth value={phoneInput} onChange={(e) => setPhoneInput(e.target.value)} sx={{ background: "rgba(var(--input-bg), .15)" }} />
+                    <TextField size="small" fullWidth value={phoneInput} onChange={(e) => setPhoneInput(e.target.value)} sx={{ background: "rgba(var(--input-bg), .15)" }} placeholder="+7 (___) ___-__-__" slotProps={{ input: { inputComponent: PhoneMaskInput as any } }} />
                   </Grid>
                   <Grid size={12}>
                     <Box component="label" sx={{ fontSize: "14px", fontWeight: "500", lineHeight: "30px", color: "#585858" }}>
                       Адрес <Box component="span" sx={{ color: "red" }}>*</Box>
                     </Box>
-                    <TextField size="small" fullWidth value={address} onChange={(e) => setAddress(e.target.value)} sx={{ background: "rgba(var(--input-bg), .15)" }} />
+                    <AddressInput value={address} onChange={setAddress} placeholder="Начните вводить адрес..." />
                   </Grid>
                   <Grid size={{ xs: 12, md: 6 }}>
                     <Box component="label" sx={{ fontSize: "14px", fontWeight: "500", lineHeight: "30px", color: "#585858" }}>
-                      Что беспокоит
+                      Направление / Врач
                     </Box>
-                    <TextField size="small" fullWidth multiline minRows={2} value={symptoms} onChange={(e) => setSymptoms(e.target.value)} sx={{ background: "rgba(var(--input-bg), .15)" }} />
+                    <TextField select size="small" fullWidth value={specialist} onChange={(e) => setSpecialist(e.target.value)} sx={{ background: "rgba(var(--input-bg), .15)" }}>
+                      <MenuItem value=""><em>Не выбрано</em></MenuItem>
+                      {SPECIALISTS.map((s) => (
+                        <MenuItem key={s} value={s}>{s}</MenuItem>
+                      ))}
+                    </TextField>
                   </Grid>
                   <Grid size={{ xs: 12, md: 6 }}>
                     <Box component="label" sx={{ fontSize: "14px", fontWeight: "500", lineHeight: "30px", color: "#585858" }}>

@@ -43,6 +43,9 @@ export const theme = createTheme({
   components: {
     MuiOutlinedInput: {
       styleOverrides: {
+        root: {
+          borderRadius: 25,
+        },
         notchedOutline: {
           border: "none",
         },

@@ -29,6 +29,58 @@ a {
   text-decoration: none;
 }
 
+/* react-dadata */
+.react-dadata__container {
+  width: 100%;
+}
+
+.react-dadata__input {
+  height: 40px;
+  border: none !important;
+  border-radius: 25px !important;
+  background: rgba(133, 150, 167, 0.15) !important;
+  font-family: var(--main-font);
+  font-size: 14px;
+  padding: 0 14px;
+  width: 100%;
+  outline: none;
+  color: inherit;
+  box-shadow: none !important;
+  transition: outline 0.15s;
+}
+
+.react-dadata__input:focus {
+  outline: 2px solid rgba(33, 205, 170, 0.4);
+  outline-offset: 0;
+}
+
+.react-dadata__suggestions {
+  z-index: 1300;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  top: calc(100% + 4px);
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+
+.react-dadata__suggestion {
+  font-size: 14px;
+  padding: 8px 14px;
+}
+
+.react-dadata__suggestion:hover {
+  background-color: rgba(33, 205, 170, 0.1);
+}
+
+.react-dadata__suggestion--current {
+  background-color: rgba(33, 205, 170, 0.15) !important;
+}
+
+.react-dadata--highlighted {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 .slick-prev:before,
 .slick-next:before {
   font-size: 50px;

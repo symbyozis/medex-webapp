@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NextPage } from "next";
 import Head from "next/head";
 import { PageLayout } from "@/shared/ui";
+import PhoneMaskInput from '@/shared/ui/components/PhoneMaskInput';
 
 // TODO: обновить когда будет подключён продакшн-домен
 const SITE_URL = "https://medex-22115.web.app";
@@ -76,7 +77,7 @@ const ContactsPage: NextPage = () => {
       <Box
         sx={{
           padding: '100px 0',
-          background: `url(./page-contacts/cable-call-communication.png) no-repeat center / cover`,
+          background: `url(/images/cable-call-communication.png) no-repeat center / cover`,
         }}
       >
         <Container>
@@ -175,6 +176,7 @@ const ContactsPage: NextPage = () => {
                       onChange={e => setPhone(e.target.value)}
                       placeholder="+7 (___) ___-__-__"
                       sx={{ mb: 2, background: 'rgba(var(--input-bg), .15)' }}
+                      slotProps={{ input: { inputComponent: PhoneMaskInput as any } }}
                     />
                   </div>
                   <div>

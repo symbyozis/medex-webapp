@@ -1,6 +1,8 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import React, { useState } from 'react';
+import PhoneMaskInput from '@/shared/ui/components/PhoneMaskInput';
+import { SPECIALISTS } from '@/shared/config/specialists';
 
 // TODO: обновить когда будет подключён продакшн-домен
 const SITE_URL = "https://medex-22115.web.app";
@@ -73,22 +75,22 @@ import {
 
 const serviceItems: IServiceItem[] = [
   {
-    image: '/page-main/icon-05.png',
+    image: '/images/icon-05.png',
     title: 'Терапия',
     text: 'Приём терапевта: диагностика, лечение и наблюдение.',
   },
   {
-    image: '/page-main/icon-07.png',
+    image: '/images/icon-07.png',
     title: 'Гинекология',
     text: 'Консультации и осмотр в комфортных условиях.',
   },
   {
-    image: '/page-main/icon-06.png',
+    image: '/images/icon-06.png',
     title: 'Урология',
     text: 'Диагностика и лечение урологических заболеваний.',
   },
   {
-    image: '/page-main/icon-04.png',
+    image: '/images/icon-04.png',
     title: 'УЗИ и лабораторная диагностика',
     text: 'Точные анализы и УЗИ — без лишних очередей.',
   },
@@ -118,7 +120,6 @@ const checkups: ICheckup[] = [
   },
 ]
 
-const DOCTORS = ['Терапевт', 'Гинеколог', 'Уролог']
 
 const HomePage: NextPage = () => {
   const [name, setName] = useState('')
@@ -271,9 +272,10 @@ const HomePage: NextPage = () => {
             <Grid size={{ xs: 12, md: 4 }} sx={{ display: { xs: 'none', md: 'block' } }}>
               <Box
                 component="img"
-                src="https://placehold.co/900"
+                src="/images/image-3.png"
                 sx={{
                   width: '100%',
+                  maxHeight: '440px',
                   borderRadius: '0 var(--border-radius) var(--border-radius) 0',
                   objectFit: 'cover'
                 }}
@@ -293,8 +295,8 @@ const HomePage: NextPage = () => {
                       Доктор <Box component="span" sx={{ color: 'red' }}>*</Box>
                     </Box>
                     <TextField select size="small" fullWidth value={doctor} onChange={e => setDoctor(e.target.value)} sx={{ mb: 2, background: 'rgba(var(--input-bg), .15)' }}>
-                      {DOCTORS.map((option) => (
-                        <MenuItem key={option} value={option}>{option}</MenuItem>
+                      {SPECIALISTS.map((s) => (
+                        <MenuItem key={s} value={s}>{s}</MenuItem>
                       ))}
                     </TextField>
                   </div>
@@ -316,7 +318,7 @@ const HomePage: NextPage = () => {
                     <Box component="label" sx={{ fontSize: '14px', fontWeight: '500', lineHeight: '30px', color: '#585858' }}>
                       Телефон <Box component="span" sx={{ color: 'red' }}>*</Box>
                     </Box>
-                    <TextField size="small" fullWidth value={phone} onChange={e => setPhone(e.target.value)} sx={{ mb: 2, background: 'rgba(var(--input-bg), .15)' }} />
+                    <TextField size="small" fullWidth value={phone} onChange={e => setPhone(e.target.value)} sx={{ mb: 2, background: 'rgba(var(--input-bg), .15)' }} placeholder="+7 (___) ___-__-__" slotProps={{ input: { inputComponent: PhoneMaskInput as any } }} />
                   </div>
                   <div>
                     <Box component="label" sx={{ fontSize: '14px', fontWeight: '500', lineHeight: '30px', color: '#585858' }}>

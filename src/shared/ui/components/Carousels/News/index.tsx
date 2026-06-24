@@ -5,7 +5,7 @@ import type { TNewsItem } from '@/pages/api/news';
 
 import styles from './news.module.scss'
 
-const FALLBACK_IMAGE = '/page-main/news-placeholder.png'
+const FALLBACK_IMAGE = '/images/news-placeholder.png'
 
 const CarouselNews = () => {
 	const [slider, setSlider] = React.useState<Slider | null>(null);
